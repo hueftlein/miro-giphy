@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://miro.com/app/static/styles.1.0.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      #container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      #form {
+        padding: 0 24px 0;
+        height: 15%;
+      }
+      #form .miro-input.miro-input--primary {
+        width: 100%;
+      }
+
+
+      #item-list {
+        display: flex;
+        overflow-y: auto;
+        overflow-x: hidden;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .image-item-box {
+        width: 50%;
+        padding: 24px;
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+      }
+
+      .image-item-box img {
+        width: 100%;
+        height: auto;
+        cursor: grab;
+      }
+
+
+    </style>
+  </head>
+  <body>
+      <div id="container">
+        <form id="form">
+            <input class="miro-input miro-input--primary" type="search" id="search" autofocus />
+            <p class="miro-p-medium">
+                Search for a keyword and drag-and-drop the desired gif 🚀🦄
+            </p>
+        </form>
+        <div id="item-list"></div>
+      </div>
+    
+    <script src="https://miro.com/app/static/sdk.1.1.js"></script>
+    <script src="library.js"></script>
+  </body>
+</html>
