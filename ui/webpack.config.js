@@ -5,8 +5,7 @@ module.exports = {
 
   entry: {
     main: './src/main.ts',
-    sidebar: './src/sidebar.tsx', // Example! It works with React.
-    modal: './src/modal.ts',
+    library: './src/sidebar/index.tsx',
   },
   module: {
     rules: [

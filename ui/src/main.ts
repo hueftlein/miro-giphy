@@ -1,22 +1,14 @@
-const icon24 =
-  '<path fill="currentColor" fill-rule="nonzero" d="M20.156 7.762c-1.351-3.746-4.672-5.297-8.838-4.61-3.9.642-7.284 3.15-7.9 5.736-1.14 4.784-.015 7.031 2.627 8.09.61.244 1.28.412 2.002.518.277.041.549.072.844.097.138.012.576.045.659.053.109.01.198.02.291.035 1.609.263 2.664 1.334 3.146 2.715 7.24-2.435 9.4-6.453 7.17-12.634zm-18.684.662C3.18 1.256 18.297-3.284 22.038 7.084c2.806 7.78-.526 13.011-9.998 15.695-.266.076-.78.173-.759-.287.062-1.296-.47-2.626-1.762-2.837-1.009-.165-10.75.124-8.047-11.23zm9.427 4.113a6.853 6.853 0 0 0 1.787.172c.223.348.442.733.79 1.366.53.967.793 1.412 1.206 2a1 1 0 1 0 1.636-1.15c-.358-.51-.593-.908-1.09-1.812-.197-.36-.358-.649-.503-.899 1.16-.573 1.916-1.605 2.005-2.909.189-2.748-2.65-4.308-6.611-3.267-.443.117-.834.44-.886 1.408-.065 1.192-.12 2.028-.25 3.825-.129 1.808-.185 2.653-.25 3.86a1 1 0 0 0 1.997.108c.05-.913.093-1.617.17-2.702zm.144-2.026c.077-1.106.124-1.82.171-2.675 2.398-.483 3.595.257 3.521 1.332-.08 1.174-1.506 1.965-3.692 1.343z"/>'
+const icon =
+  '<g fill="none" fill-rule="evenodd"><path d="M6.331 4.286H17.99v15.428H6.33z" fill="#000"/><g fill-rule="nonzero"><path d="M4 3.714h2.331v16.572H4z" fill="#04ff8e"/><path d="M17.989 8.286h2.331v12h-2.331z" fill="#8e2eff"/><path d="M4 19.714h16.32V22H4z" fill="#00c5ff"/><path d="M4 2h9.326v2.286H4z" fill="#fff152"/><path d="M17.989 6.571V4.286h-2.332V2h-2.331v6.857h6.994V6.571" fill="#ff5b5b"/><path d="M17.989 11.143V8.857h2.331" fill="#551c99"/></g><path d="M13.326 2v2.286h-2.332" fill="#999131"/></g>'
 
 miro.onReady(() => {
   miro.initialize({
     extensionPoints: {
-      exportMenu: {
-        title: 'Boilerplate export',
-        svgIcon: icon24,
-        onClick: () => {
-          // Remember that 'modal.html' resolves relative to main.js file. So modal.html have to be in the /dist/ folder.
-          miro.board.ui.openModal('modal.html')
-        },
-      },
       bottomBar: {
-        title: 'Boilerplate bottomBar',
-        svgIcon: icon24,
+        title: 'Giphy',
+        svgIcon: icon,
         onClick: () => {
-          miro.board.ui.openLeftSidebar('sidebar.html')
+          miro.board.ui.openLibrary('library.html', { title: "Giphy" })
         },
       },
     },
