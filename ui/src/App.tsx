@@ -3,10 +3,11 @@ import "./App.css";
 import { GifSearch } from "./components/gif-search/GifSearch";
 
 function App() {
-  if (process.env.REACT_APP_SEARCH_URL) {
-    return <GifSearch searchBasePath={process.env.REACT_APP_SEARCH_URL} />;
+  const apiKey = process.env.REACT_APP_GIPHY_API_KEY;
+  if (apiKey) {
+    return <GifSearch apiKey={apiKey} />;
   }
-  throw new Error(`missing env var "REACT_APP_SEARCH_URL"`);
+  throw new Error(`missing "REACT_APP_GIPHY_API_KEY" env var`);
 }
 
 export default App;
