@@ -7,6 +7,7 @@ import {
 } from "@giphy/react-components";
 import { useContext } from "react";
 import * as miro from "./miro";
+import giphyAttributionIcon from "../../icons/giphy-attribution.png";
 
 const Overlay: React.ElementType<GifOverlayProps> = ({
   gif,
@@ -39,12 +40,20 @@ const GifSearchContent: React.FC = () => {
           overlay={Overlay}
         />
       </div>
-      <a
-        className={"giphy-attribution"}
-        href="https://giphy.com/"
-        target="_blank"
-        rel={"noopener noreferrer"}
-      />
+      <div className={"giphy-attribution"}>
+        <a
+          href="https://giphy.com/"
+          target="_blank"
+          rel={"noopener noreferrer"}
+        >
+          <img
+            src={giphyAttributionIcon}
+            alt="Powered by Giphy"
+            height={22}
+            width={200}
+          />
+        </a>
+      </div>
     </>
   );
 };

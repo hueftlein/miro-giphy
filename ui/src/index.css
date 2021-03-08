@@ -35,12 +35,12 @@ body {
 }
 
 .giphy-attribution {
-  display: block;
   min-height: 22px;
   height: 22px;
-  background: url("./icons/giphy-attribution.png");
-  background-repeat: no-repeat;
-  background-position: center right;
   margin: 24px 24px 0;
-  cursor: pointer;
+  text-align: right;
+}
+
+.giphy-attribution a {
+  display: inline-block;
 }
