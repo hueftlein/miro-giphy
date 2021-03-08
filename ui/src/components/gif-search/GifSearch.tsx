@@ -6,48 +6,37 @@ import {
   SearchContextManager, // the context manager, includes the Context.Provider
 } from "@giphy/react-components";
 import { useContext } from "react";
-import { gifPaginator } from "@giphy/js-fetch-api";
+import * as miro from "./miro";
 
 const Overlay: React.ElementType<GifOverlayProps> = ({
   gif,
 }: GifOverlayProps) => (
   <div
     className="overlay"
-    data-image-url={gif.embed_url}
-    data-preview-url={gif.images.preview}
+    data-image-url={gif.images.original.url}
+    data-preview-url={gif.images.downsized_still.url}
+    data-preview-width={gif.images.downsized_still.width}
+    data-preview-height={gif.images.downsized_still.height}
   ></div>
 );
 
 const GifSearchContent: React.FC = () => {
   const { fetchGifs, searchKey } = useContext(SearchContext);
   const container = React.useRef<HTMLDivElement | null>(null);
+  miro.useDraggableItemContainer(container.current);
   return (
     <>
       <div className={"search-bar-wrapper"}>
         <SearchBar autoFocus={true} />
       </div>
-      <div ref={container}>
+      <div ref={container} className={"grid-wrapper"}>
         <Grid
           key={searchKey}
           columns={2}
           width={272}
           fetchGifs={fetchGifs}
           noLink={true}
-          // hideAttribution={true}
           overlay={Overlay}
-          onGifVisible={() => {
-            container.current &&
-              miro &&
-              miro.board.ui.initDraggableItemsContainer(container.current, {
-                draggableItemSelector: "overlay",
-                getDraggableItemPreview: (target) => ({
-                  url: target.getAttribute("dataPreviewUrl") || "",
-                }),
-                onDrop: () => {
-                  miro.showNotification("You dropped something");
-                },
-              });
-          }}
         />
       </div>
     </>

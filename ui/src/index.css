@@ -1,17 +1,26 @@
 body {
   margin: 0;
-  padding: 59px 24px 24px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 24px;
 }
 
 .search-bar-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  padding: 0 24px 24px;
+}
+
+.grid-wrapper {
+  overflow-y: auto;
   padding: 0 24px;
-  height: 59px;
-  z-index: 1;
-  background: linear-gradient(180deg, white 37px, transparent 100%);
 }
 
 .overlay {
