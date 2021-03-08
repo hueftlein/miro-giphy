@@ -15,12 +15,14 @@ body {
 }
 
 .search-bar-wrapper {
-  padding: 0 24px 24px;
+  margin: 0 24px 24px;
+  border: 1px solid black;
 }
 
 .grid-wrapper {
   overflow-y: auto;
   padding: 0 24px;
+  flex-grow: 1;
 }
 
 .overlay {
@@ -29,4 +31,16 @@ body {
   top: 0;
   right: 0;
   bottom: 0;
+  cursor: grab;
+}
+
+.giphy-attribution {
+  display: block;
+  min-height: 22px;
+  height: 22px;
+  background: url("./icons/giphy-attribution.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+  margin: 24px 24px 0;
+  cursor: pointer;
 }

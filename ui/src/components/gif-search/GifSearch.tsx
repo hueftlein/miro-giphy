@@ -39,6 +39,12 @@ const GifSearchContent: React.FC = () => {
           overlay={Overlay}
         />
       </div>
+      <a
+        className={"giphy-attribution"}
+        href="https://giphy.com/"
+        target="_blank"
+        rel={"noopener noreferrer"}
+      />
     </>
   );
 };
