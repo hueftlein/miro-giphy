@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/miro-giphy/static/css/main.d9cead68.chunk.css",
-    "main.js": "/miro-giphy/static/js/main.0c62ecd5.chunk.js",
-    "main.js.map": "/miro-giphy/static/js/main.0c62ecd5.chunk.js.map",
+    "main.js": "/miro-giphy/static/js/main.eaafdd7e.chunk.js",
+    "main.js.map": "/miro-giphy/static/js/main.eaafdd7e.chunk.js.map",
     "runtime-main.js": "/miro-giphy/static/js/runtime-main.74d1e92b.js",
     "runtime-main.js.map": "/miro-giphy/static/js/runtime-main.74d1e92b.js.map",
-    "static/js/2.62c3f323.chunk.js": "/miro-giphy/static/js/2.62c3f323.chunk.js",
-    "static/js/2.62c3f323.chunk.js.map": "/miro-giphy/static/js/2.62c3f323.chunk.js.map",
+    "static/js/2.68735104.chunk.js": "/miro-giphy/static/js/2.68735104.chunk.js",
+    "static/js/2.68735104.chunk.js.map": "/miro-giphy/static/js/2.68735104.chunk.js.map",
     "static/js/3.e53935ab.chunk.js": "/miro-giphy/static/js/3.e53935ab.chunk.js",
     "static/js/3.e53935ab.chunk.js.map": "/miro-giphy/static/js/3.e53935ab.chunk.js.map",
     "index.html": "/miro-giphy/index.html",
     "static/css/main.d9cead68.chunk.css.map": "/miro-giphy/static/css/main.d9cead68.chunk.css.map",
-    "static/js/2.62c3f323.chunk.js.LICENSE.txt": "/miro-giphy/static/js/2.62c3f323.chunk.js.LICENSE.txt"
+    "static/js/2.68735104.chunk.js.LICENSE.txt": "/miro-giphy/static/js/2.68735104.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.74d1e92b.js",
-    "static/js/2.62c3f323.chunk.js",
+    "static/js/2.68735104.chunk.js",
     "static/css/main.d9cead68.chunk.css",
-    "static/js/main.0c62ecd5.chunk.js"
+    "static/js/main.eaafdd7e.chunk.js"
   ]
 }
