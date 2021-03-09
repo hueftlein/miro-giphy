@@ -1,6 +1,7 @@
 import * as React from "react";
-import { GifOverlayProps, Grid } from "@giphy/react-components";
 import {
+  GifOverlayProps,
+  Grid,
   SearchBar, // the search bar the user will type into
   SearchContext, // the context that wraps and connects our components
   SearchContextManager, // the context manager, includes the Context.Provider
