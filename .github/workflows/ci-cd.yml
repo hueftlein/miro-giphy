@@ -4,13 +4,12 @@
 name: CI/CD
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -18,18 +17,25 @@ jobs:
         node-version: [10.x]
 
     steps:
-    - uses: actions/checkout@v2
-    
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-        
-    - name: UI
-      run: cd ui
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies
+        working-directory: ./ui
+        run: npm install
+
+      - name: Build
+        working-directory: ./ui
+        env:
+          REACT_APP_GIPHY_API_KEY: ${{ secrets.REACT_APP_GIPHY_API_KEY }}
+        run: npm run build
       
-    - name: Install dependencies
-      run: npm install
-      
-    - name: Build
-      run: npm build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+            personal_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
+            publish_dir: ./ui/build
